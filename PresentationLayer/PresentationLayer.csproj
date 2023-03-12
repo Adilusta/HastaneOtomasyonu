@@ -1,0 +1,445 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{49A0FB8F-46A5-4C78-AFFF-E864099E5A59}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>PresentationLayer</RootNamespace>
+    <AssemblyName>PresentationLayer</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x64</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.9.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>..\packages\BouncyCastle.1.8.9\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.3, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>..\packages\iTextSharp.5.5.13.3\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="System">
+      <HintPath>..\..\..\..\..\..\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.7.2\System.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Core" />
+    <Reference Include="System.Windows.Forms.DataVisualization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="FrmDoktor.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoktor.Designer.cs">
+      <DependentUpon>FrmDoktor.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmDoktorGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDoktorGiris.Designer.cs">
+      <DependentUpon>FrmDoktorGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmRolSecimi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmRolSecimi.Designer.cs">
+      <DependentUpon>FrmRolSecimi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSekreter.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSekreter.Designer.cs">
+      <DependentUpon>FrmSekreter.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmSekreterGiris.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmSekreterGiris.Designer.cs">
+      <DependentUpon>FrmSekreterGiris.cs</DependentUpon>
+    </Compile>
+    <Compile Include="HastaneOtomasyonuDbDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HastaneOtomasyonuDbDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="RoundButton.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="UserControlsEkleme\userDrEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsEkleme\userDrEkle.Designer.cs">
+      <DependentUpon>userDrEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsEkleme\userHastaEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsEkleme\userHastaEkle.Designer.cs">
+      <DependentUpon>userHastaEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsEkleme\userSekrtrEkle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsEkleme\userSekrtrEkle.Designer.cs">
+      <DependentUpon>userSekrtrEkle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsGuncelleme\userDrGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsGuncelleme\userDrGuncelle.Designer.cs">
+      <DependentUpon>userDrGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsGuncelleme\userHastaGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsGuncelleme\userHastaGuncelle.Designer.cs">
+      <DependentUpon>userHastaGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsGuncelleme\userSekrtrGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsGuncelleme\userSekrtrGuncelle.Designer.cs">
+      <DependentUpon>userSekrtrGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsRandevu\UserRandevuAl.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsRandevu\UserRandevuAl.Designer.cs">
+      <DependentUpon>UserRandevuAl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsRandevu\UserRandevuGuncelle.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsRandevu\UserRandevuGuncelle.Designer.cs">
+      <DependentUpon>UserRandevuGuncelle.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsRandevu\UserRandevuSil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsRandevu\UserRandevuSil.Designer.cs">
+      <DependentUpon>UserRandevuSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsSilme\userDrSil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsSilme\userDrSil.Designer.cs">
+      <DependentUpon>userDrSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsSilme\userHastaSil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsSilme\userHastaSil.Designer.cs">
+      <DependentUpon>userHastaSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControlsSilme\userSekrtrSil.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControlsSilme\userSekrtrSil.Designer.cs">
+      <DependentUpon>userSekrtrSil.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userBransaGoreGrafik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\userBransaGoreGrafik.Designer.cs">
+      <DependentUpon>userBransaGoreGrafik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userDrAnaSayfa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\userDrAnaSayfa.Designer.cs">
+      <DependentUpon>userDrAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userDrEskiKayitlar.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\userDrEskiKayitlar.Designer.cs">
+      <DependentUpon>userDrEskiKayitlar.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userDrGoreHastaGrafik.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\userDrGoreHastaGrafik.Designer.cs">
+      <DependentUpon>userDrGoreHastaGrafik.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userDrRandevuKayitlari.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\userDrRandevuKayitlari.Designer.cs">
+      <DependentUpon>userDrRandevuKayitlari.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserControls\userSekrtrAnaSayfa.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserControls\userSekrtrAnaSayfa.Designer.cs">
+      <DependentUpon>userSekrtrAnaSayfa.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="FrmDoktor.resx">
+      <DependentUpon>FrmDoktor.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmDoktorGiris.resx">
+      <DependentUpon>FrmDoktorGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmRolSecimi.resx">
+      <DependentUpon>FrmRolSecimi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSekreter.resx">
+      <DependentUpon>FrmSekreter.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmSekreterGiris.resx">
+      <DependentUpon>FrmSekreterGiris.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="UserControlsEkleme\userDrEkle.resx">
+      <DependentUpon>userDrEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsEkleme\userHastaEkle.resx">
+      <DependentUpon>userHastaEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsEkleme\userSekrtrEkle.resx">
+      <DependentUpon>userSekrtrEkle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsGuncelleme\userDrGuncelle.resx">
+      <DependentUpon>userDrGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsGuncelleme\userHastaGuncelle.resx">
+      <DependentUpon>userHastaGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsGuncelleme\userSekrtrGuncelle.resx">
+      <DependentUpon>userSekrtrGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsRandevu\UserRandevuAl.resx">
+      <DependentUpon>UserRandevuAl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsRandevu\UserRandevuGuncelle.resx">
+      <DependentUpon>UserRandevuGuncelle.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsRandevu\UserRandevuSil.resx">
+      <DependentUpon>UserRandevuSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsSilme\userDrSil.resx">
+      <DependentUpon>userDrSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsSilme\userHastaSil.resx">
+      <DependentUpon>userHastaSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControlsSilme\userSekrtrSil.resx">
+      <DependentUpon>userSekrtrSil.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\userBransaGoreGrafik.resx">
+      <DependentUpon>userBransaGoreGrafik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\userDrAnaSayfa.resx">
+      <DependentUpon>userDrAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\userDrEskiKayitlar.resx">
+      <DependentUpon>userDrEskiKayitlar.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\userDrGoreHastaGrafik.resx">
+      <DependentUpon>userDrGoreHastaGrafik.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\userDrRandevuKayitlari.resx">
+      <DependentUpon>userDrRandevuKayitlari.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserControls\userSekrtrAnaSayfa.resx">
+      <DependentUpon>userSekrtrAnaSayfa.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="HastaneOtomasyonuDbDataSet.xsc">
+      <DependentUpon>HastaneOtomasyonuDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="HastaneOtomasyonuDbDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>HastaneOtomasyonuDbDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="HastaneOtomasyonuDbDataSet.xss">
+      <DependentUpon>HastaneOtomasyonuDbDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-team.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\home1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secretary %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1doctor.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagnosis.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secretary %281%291.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1medical-record.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\notes.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\user.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secretary.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\profile.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\secretary1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete-file.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1delete1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\delete %281%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\medical-records.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\diagnosis1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\hospital1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ambulance.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\BusinessLayer\BusinessLayer.csproj">
+      <Project>{eb99ee92-58a8-4f6f-b2ef-621d926b89d6}</Project>
+      <Name>BusinessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\DataAccessLayer\DataAccessLayer.csproj">
+      <Project>{61fda24b-8696-41fb-a245-2a6c250e4afb}</Project>
+      <Name>DataAccessLayer</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\EntityLayer\EntityLayer.csproj">
+      <Project>{a7cff97f-5c21-44c6-a923-12f37c89e444}</Project>
+      <Name>EntityLayer</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="HastaneOtomasyonuDb.mdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\delete %282%29.png" />
+    <None Include="Resources\garbage %281%29.png" />
+    <None Include="Resources\padlock %282%29.png" />
+    <None Include="Resources\minus.png" />
+    <None Include="Resources\letter-x.png" />
+    <None Include="Resources\chart %281%29.png" />
+    <None Include="Resources\pie-chart %282%29.png" />
+    <None Include="Resources\pill.png" />
+    <None Include="Resources\doctor-bag.png" />
+    <None Include="Resources\medical-tools.png" />
+    <None Include="Resources\pills.png" />
+    <None Include="Resources\blood-pressure-gauge.png" />
+    <None Include="Resources\lab-coat.png" />
+    <None Include="Resources\pie-chart.png" />
+    <None Include="Resources\delete %281%292.png" />
+    <None Include="Resources\denied.png" />
+    <None Include="Resources\delete %281%291.png" />
+    <None Include="Resources\user %281%29.png" />
+    <None Include="Resources\deep-learning.png" />
+    <None Include="Resources\calendar %281%291.png" />
+    <None Include="Resources\3calendar.png" />
+    <None Include="Resources\2calendar.png" />
+    <None Include="Resources\video-lesson.png" />
+    <None Include="Resources\update.png" />
+    <None Include="Resources\secretary %284%29.png" />
+    <None Include="Resources\doctor-patient.png" />
+    <None Include="Resources\secretary %281%292.png" />
+    <None Include="Resources\3doctor.png" />
+    <None Include="Resources\2secretary.png" />
+    <None Include="Resources\login %281%29.png" />
+    <None Include="Resources\padlock %281%29.png" />
+    <None Include="Resources\user1.png" />
+    <None Include="Resources\multiple-user.png" />
+    <None Include="Resources\doctor2.png" />
+    <None Include="Resources\doctor1.png" />
+    <None Include="Resources\calendar %281%29.png" />
+    <None Include="Resources\heart-rate.png" />
+    <None Include="Resources\medicine.png" />
+    <None Include="Resources\hospital3.png" />
+    <None Include="Resources\medical-result.png" />
+    <None Include="Resources\hospital %282%29.png" />
+    <None Include="Resources\operator.png" />
+    <None Include="Resources\document1.png" />
+    <None Include="Resources\document.png" />
+    <None Include="Resources\consent.png" />
+    <None Include="Resources\ambulance1.png" />
+    <None Include="Resources\hospital2.png" />
+    <None Include="Resources\medical-report.png" />
+    <None Include="Resources\doctor.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
