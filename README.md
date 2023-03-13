@@ -12,4 +12,4 @@ SEKRETER GİRİŞ BİLGİLERİ
 e mail: ademusta@hotmail.com
 şifre: 1234
 
-Ayrıntılı bilgi için PresentationLayer'daki veritabanına bakınız.
+Ayrıntılı bilgi için PresentationLayer'daki HastaneOtomasyonuDb.mdb isimli veritabanına bakınız.
